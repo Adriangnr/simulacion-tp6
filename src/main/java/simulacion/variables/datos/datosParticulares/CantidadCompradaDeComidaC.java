@@ -17,7 +17,7 @@ public class CantidadCompradaDeComidaC extends Dato {
         Double val = 2-(8485/10000.0)*ln;
 
         if(val < 0 || val > 20)
-            this.obtenerValor();
+            val = this.obtenerValor();
 
         return RandomValue.round(val); //CCC =  2-(8485/10000)*ln(1/R-1)
     }
