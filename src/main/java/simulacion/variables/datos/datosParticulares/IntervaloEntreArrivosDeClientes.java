@@ -9,9 +9,13 @@ public class IntervaloEntreArrivosDeClientes extends Dato {
     public Double obtenerValor() {
         Double r = RandomValue.random();
 
-        Double pot = Math.pow(((1/r)-1), (1/1380.0));
+        Double a=Math.log(-r+1);
 
-        Double val = ((2/pot)+1380)/60;
+        Double val= (a/(-0.0006))/60;
+
+
+        if(val<7)
+            val=val+7;
 
         return RandomValue.round(val);/*  2/(( 1/R -1)^(1/1380))+1380  */
     }

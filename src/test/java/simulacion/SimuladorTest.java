@@ -28,7 +28,7 @@ public class SimuladorTest {
         eventos.add(new LlegadaStockA("LLSA", 0.0));
         eventos.add(new LlegadaStockB("LLSB", 1440.0));
 
-        Simulacion simulacion = new Simulacion(61920.0*500, eventos);
+        Simulacion simulacion = new Simulacion(61920.0*500-80, eventos);
 
         Map<String, Dato> valores = new HashMap<String, Dato>();
         valores.put("IA", new IntervaloEntreArrivosDeClientes());
