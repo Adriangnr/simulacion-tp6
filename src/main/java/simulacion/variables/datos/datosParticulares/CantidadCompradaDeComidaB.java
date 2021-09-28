@@ -16,9 +16,9 @@ public class CantidadCompradaDeComidaB extends Dato {
 
         Double val = (18511/10000.0)-(6799/10000.0)*ln;
 
-        if(val < 1){
-            val = val + 1;
-        }
+        if(val < 0 || val > 20)
+            this.obtenerValor();
+
         return RandomValue.round(val); //CCB = (18511/10000)-(6799/10000)*ln(1/R-1)
     }
 }

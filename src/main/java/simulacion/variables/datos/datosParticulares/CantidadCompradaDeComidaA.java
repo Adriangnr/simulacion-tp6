@@ -17,9 +17,10 @@ public class CantidadCompradaDeComidaA extends Dato {
         Double ln = Math.log(-r+1);
 
         Double val = ln/(-6061/10000.0);
-        if(val < 1){
-            val = val + 1;
-        }
+
+        if(val < 0 || val > 20)
+            this.obtenerValor();
+
         return RandomValue.round(val); /*  CCA = ln(-R+1)/(-6061/10000)  */
     }
 }
